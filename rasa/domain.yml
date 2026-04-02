@@ -1,0 +1,190 @@
+version: "3.1"
+
+intents:
+  - chaohoi
+  - tambiet
+  - ToChucNghiLe
+  - trach_nhiem_va_quyen_han
+  - inform
+  - NguyenTacLamViec
+  - ThamQuyenPheDuyetHop
+  - TrachNhiemTiepCBCS
+  - LoaiHoiNghiVaHop
+  - LoaiChuongTrinhCongTac
+  - pham_vi_giai_quyet_cong_viec
+  - TrinhTuToChucHop
+  - quy_trinh_xay_dung_chuong_trinh_cong_tac
+  - NguyenTacToChucHop
+  - CanCuXayDungChuongTrinhCongTac
+  - TrinhVaKyVanBan
+  - ThamQuyenDuyetVaKyVanBan
+  - TieuChuanChucDanhGiangDay
+  - ThamQuyenBoNhiemBaiNhiemChucDanhGiangDay
+  - NguyenTacBoNhiemBaiNhiemChucNangGiangDay
+  - HoSoThuTucMienNhiemBaiNhiemChucDanhGiangDay
+  - CacTruongHopBoNhiemBaiNhiemChucDanhGiangDay
+  - ThoiDiemXetBoNhiemBaiNhiemChucDanhGiangDay
+  - HoiVeNhiemVuChucDanhGiangDay
+  - HoiVeHoiDong
+  - QuyTrinhBoNhiemChucDanh
+  - HoiVeDieu
+  - nlu_fallback
+
+actions:
+  - trachNhiemVaQuyenHanAction
+  - trachNhiemTiepCBCSAction
+  - phamViGiaiQuyetCongViecAction
+  - quyTrinhXayDungChuongTrinhCongTacAction
+  - customActionBase
+  - actionBaseWithEntityForm
+  - hoiVeDieuAction
+  - utter_chaohoi
+  - utter_tambiet
+  - action_phogpt_fallback
+  - action_fallback_ollama_phogpt
+
+entities:
+  - GiangVien
+  - CBCS
+  - GiangVienThinhGiang
+  - HieuTruong
+  - ThuTruong
+  - PhoThuTruong
+  - article_number
+  - document_name
+  - time
+  - actionTT17
+  - chucDanh
+  - capBac
+
+slots:
+  originalIntent:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_intent
+        value: CacTruongHopBoNhiemBaiNhiemChucDanhGiangDay
+        intent: CacTruongHopBoNhiemBaiNhiemChucDanhGiangDay
+      - type: from_intent
+        value: ThoiDiemXetBoNhiemBaiNhiemChucDanhGiangDay
+        intent: ThoiDiemXetBoNhiemBaiNhiemChucDanhGiangDay
+      - type: from_intent
+        value: HoiVeNhiemVuChucDanhGiangDay
+        intent: HoiVeNhiemVuChucDanhGiangDay
+      - type: from_intent
+        value: HoiVeHoiDong
+        intent: HoiVeHoiDong
+      - type: from_intent
+        value: QuyTrinhBoNhiemChucDanh
+        intent: QuyTrinhBoNhiemChucDanh
+
+  doi_tuong:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: GiangVien
+      - type: from_entity
+        entity: GiangVienThinhGiang
+      - type: from_entity
+        entity: CBCS
+      - type: from_entity
+        entity: ThuTruong
+      - type: from_entity
+        entity: PhoThuTruong
+      - type: from_text
+        intent: inform
+  doi_tuong_tiep_CSCS:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: ThuTruong
+      - type: from_entity
+        entity: HieuTruong
+      - type: from_text
+        intent: inform
+  time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time
+      - type: from_text
+        intent: inform
+  actionTT17:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: actionTT17
+      - type: from_text
+        intent: inform
+  chucDanh:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: GiangVien
+      - type: from_entity
+        entity: chucDanh
+      - type: from_text
+        intent: inform
+  capBac:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: capBac
+      - type: from_text
+        intent: inform
+forms:
+  trach_nhiem_quyen_han_form:
+    required_slots:
+      - doi_tuong
+  trachNhiemTiepCBCS_form:
+    required_slots:
+      - doi_tuong_tiep_CSCS
+  pham_vi_giai_quyet_cong_viec_form:
+    required_slots:
+      - doi_tuong
+  quyTrinhXayDungChuongTrinhCongTac_form:
+    required_slots:
+      - time
+  truongHopChucDanhGiangDay_form:
+    required_slots:
+      - actionTT17
+  thoiDiemChucDanhGiangDay_form:
+    required_slots:
+      - actionTT17
+  chucDanhGiangDay_form:
+    required_slots:
+      - chucDanh
+  capBacHoiDong_form:
+    required_slots:
+      - capBac
+  chucDanhBoNhiem_form:
+    required_slots:
+      - chucDanh
+
+responses:
+  utter_chaohoi:
+    - text: "chào bạn! Tôi là trợ lý ảo, tôi có thể giúp gì cho bạn?"
+  utter_tambiet:
+    - text: "tạm biệt"
+  utter_ask_doi_tuong:
+    - text: "Bạn muốn biết trách nhiệm và quyền hạn của đối tượng nào (Giảng viên, Giảng viên thỉnh giảng, Cán bộ chiến sĩ,...)?"
+  utter_ask_doi_tuong_tiep_CSCS:
+    - text: "Bạn muốn biết trách nhiệm của đối tượng nào (Hiệu trưởng, Thủ trưởng,...)?"
+  utter_ask_time:
+    - text: "Bạn muốn biết quy trình xây dựng chương trình công tác trong khoảng thời gian nào (Năm, Học kỳ, Tháng, Quý, Tuần)?"
+  utter_ask_actionTT17:
+    - text: "Bạn muốn biết trường hợp nào? (bổ nhiệm, bãi nhiệm, miễn nhiệm)"
+  utter_ask_chucDanh:
+    - text: "Bạn muốn biết chức danh nào? (giảng viên, giảng viên chính, trợ giảng)?"
+  utter_ask_capBac:
+    - text: "Bạn muốn biết cấp bậc nào? (cấp bộ, cấp trường)?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

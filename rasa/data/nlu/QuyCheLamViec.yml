@@ -1,0 +1,113 @@
+version: "3.1"
+
+nlu:
+  - intent: ToChucNghiLe
+    examples: |
+      - Trường có những nghi lễ nào?
+      - Các nghi lễ ở trường là gì?
+      - Trường tổ chức những nghi lễ nào?
+
+  - intent: trach_nhiem_va_quyen_han
+    examples: |
+      - Trách nhiệm và quyền hạn của [giảng viên]{"entity":"GiangVien"} là gì?
+      - Nói cho tôi biết về trách nhiệm và quyền hạn của [giảng viên]{"entity":"GiangVien"}
+      - [Giảng viên]{"entity":"GiangVien"} có trách nhiệm gì?
+      - Trách nhiệm và quyền hạn của [giảng viên thỉnh giảng]{"entity":"GiangVienThinhGiang"} là gì?
+      - Nói cho tôi biết về trách nhiệm và quyền hạn của [giảng viên thỉnh giảng]{"entity":"GiangVienThinhGiang"}
+      - [Giảng viên thỉnh giảng]{"entity":"GiangVienThinhGiang"} có trách nhiệm và quyền hạn như thế nào?
+      - Nội dung trách nhiệm và quyền của [giảng viên thỉnh giảng]{"entity":"GiangVienThinhGiang"} là gì?
+      - [Giảng viên thỉnh giảng]{"entity":"GiangVienThinhGiang"} có quyền gì?
+      - [Cán bộ chiến sĩ]{"entity":"CBCS"} có trách nhiệm gì trong công tác?
+      - [Cán bộ chiến sĩ]{"entity":"CBCS"} phải chấp hành những quy định nào?
+      - Trách nhiệm và quyền hạn của [cán bộ chiến sĩ]{"entity":"CBCS"} là gì?
+      - Nói cho tôi biết về trách nhiệm và quyền hạn của [cán bộ chiến sĩ]{"entity":"CBCS"}
+      - Trách nhiệm của [giảng viên]{"entity":"GiangVien"}, không phải giảng viên thỉnh giảng là gì?
+      - Trách nhiệm và quyền hạn là gì?
+      - Cho tôi biết về quyền hạn?
+      - Trách nhiệm quy định như thế nào?
+      - Ai có quyền hạn gì?
+  - intent: NguyenTacLamViec
+    examples: |
+      - Nguyên tắc làm việc của trường là gì?
+      - Trường có nguyên tắc làm việc nào?
+      - Quy định về nguyên tắc làm việc?
+      - Cơ chế và nguyên tắc làm việc của trường?
+  - intent: ThamQuyenPheDuyetHop
+    examples: |
+      - Thẩm quyền phê duyệt cuộc họp như thế nào?
+      - Nói cho tôi biết về thẩm quyền phê duyệt cuộc họp của trường
+      - Quy định về thẩm quyền phê duyệt cuộc họp?
+      - Trường có quy định gì về thẩm quyền phê duyệt cuộc họp?
+      - Ai có thẩm quyền quyết định tổ chức cuộc họp?
+  - intent: TrachNhiemTiepCBCS
+    examples: |
+      - Trách nhiệm [thủ trưởng]{"entity":"ThuTruong"} trong tiếp cán bộ chiến sĩ là gì?
+      - Trách nhiệm [hiệu trưởng]{"entity":"HieuTruong"} trong tiếp cán bộ chiến sĩ là gì?
+      - Quy định về trách nhiệm [thủ trưởng]{"entity":"ThuTruong"} trong tiếp cán bộ chiến sĩ?
+      - Quy định về trách nhiệm [hiệu trưởng]{"entity":"HieuTruong"} trong tiếp cán bộ chiến sĩ?
+  - intent: LoaiHoiNghiVaHop
+    examples: |
+      - Các loại hội nghị, cuộc họp của trường?
+      - Trường có những loại hội nghị và cuộc họp nào?
+      - Ai được quyền tổ chức các cuộc họp trong Trường?
+  - intent: LoaiChuongTrinhCongTac
+    examples: |
+      - Các loại chương trình công tác của trường?
+      - Có những loại chương trình công tác nào?
+      - Có bao nhiêu loại chương trình công tác?
+  - intent: pham_vi_giai_quyet_cong_viec
+    examples: |
+      - Phạm vi giải quyết công việc của [thủ trưởng]{"entity":"ThuTruong"} là gì?
+      - Phạm vi giải quyết công việc của [thủ trưởng]{"entity":"ThuTruong"} đơn vị trực thuộc Trường?
+      - [Thủ trưởng]{"entity":"ThuTruong"} đơn vị trường có phạm vi giải quyết công việc như thế nào?
+      - [Thủ trưởng]{"entity":"ThuTruong"} đơn vị được quyền giải quyết những công việc nào?
+      - Phạm vi giải quyết công việc của [phó thủ trưởng]{"entity":"PhoThuTruong"} là gì?
+      - Phạm vi giải quyết công việc của [phó thủ trưởng]{"entity":"PhoThuTruong"} đơn vị trực thuộc Trường?
+      - [Phó thủ trưởng]{"entity":"PhoThuTruong"} đơn vị trường có phạm vi giải quyết công việc như thế nào?
+      - [Phó thủ trưởng]{"entity":"PhoThuTruong"} chịu trách nhiệm trước ai?
+      - [Phó thủ trưởng]{"entity":"PhoThuTruong"} giúp việc cho Thủ trưởng như thế nào?
+  - intent: TrinhTuToChucHop
+    examples: |
+      - Trình tự tổ chức cuộc họp, hội nghị của trường?
+      - Trình tự tổ chức cuộc họp của trường?
+      - Trình tự tổ chức hội nghị của trường?
+      - Các bước tổ chức cuộc họp tại Trường gồm những gì?
+  - intent: quy_trinh_xay_dung_chuong_trinh_cong_tac
+    examples: |
+      - Quy trình xây dựng chương trình công tác [năm](time) như thế nào?
+      - Trình tự xây dựng chương trình công tác [năm](time)?
+      - Quy trình xây dựng chương trình công tác [học kỳ](time) ra sao?
+      - Khi nào xây dựng chương trình công tác [học kỳ](time)?
+      - Quy trình xây dựng chương trình công tác [tháng](time) như thế nào?
+      - Chương trình công tác [tháng](time) được xây dựng ra sao?
+      - Quy trình xây dựng chương trình công tác [quý](time) như thế nào?
+      - Trình tự xây dựng chương trình công tác [quý](time)?
+      - Quy trình xây dựng chương trình công tác [tuần](time) như thế nào?
+  - intent: NguyenTacToChucHop
+    examples: |
+      - Nguyên tắc tổ chức hội nghị, cuộc họp là gì?
+      - Cuộc họp tại Trường phải tuân theo nguyên tắc nào?
+      - Việc tổ chức họp cần đảm bảo những yêu cầu gì?
+  - intent: CanCuXayDungChuongTrinhCongTac
+    examples: |
+      - Căn cứ xây dựng chương trình công tác là gì?
+      - Chương trình công tác dựa vào đâu xây dựng?
+      - Quy định về căn cứ xây dựng chương trình công tác?
+  - intent: TrinhVaKyVanBan
+    examples: |
+      - Trình và ký văn bản như thế nào?
+      - Quy định về trình và ký văn bản?
+  - intent: ThamQuyenDuyetVaKyVanBan
+    examples: |
+      - Quy định về thẩm quyền duyệt và ký văn bản như thế nào?
+      - Ai có thẩm quyền duyệt và ký văn bản?
+  - intent: HoiVeDieu
+    examples: |
+      - Nội dung Điều [13](article_number) của [quy chế làm việc của trường](document_name)
+      - Điều [45](article_number) trong [quy định làm việc của trường](document_name) quy định gì?
+      - Cho tôi biết Điều [10](article_number) của [quy định làm việc của trường](document_name)
+      - Điều [13](article_number) của [quy chế làm việc](document_name) nói gì?
+      - Nội dung điều [100](article_number) trong [thông tư 17](document_name)
+      - Điều [25](article_number) của [thông tư số 17](document_name) quy định gì?
+      - Nội dung của điều [7](article_number) trong [quy định về bổ nhiệm, bãi nhiệm, miễn nhiệm các chức danh giảng dạy trong CAND](document_name)
+      - Nội dung điều [15](article_number) trong [TT số 17](document_name)

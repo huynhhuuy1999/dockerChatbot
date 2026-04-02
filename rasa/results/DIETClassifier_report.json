@@ -1,0 +1,109 @@
+{
+  "document_name": {
+    "precision": 0.94,
+    "recall": 0.9791666666666666,
+    "f1-score": 0.9591836734693877,
+    "support": 48,
+    "confused_with": {
+      "article_number": 1
+    }
+  },
+  "PhoThuTruong": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
+  },
+  "actionTT17": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "HieuTruong": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "article_number": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1-score": 0.9411764705882353,
+    "support": 8,
+    "confused_with": {}
+  },
+  "capBac": {
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1-score": 0.9523809523809523,
+    "support": 10,
+    "confused_with": {}
+  },
+  "chucDanh": {
+    "precision": 1.0,
+    "recall": 0.9655172413793104,
+    "f1-score": 0.9824561403508771,
+    "support": 29,
+    "confused_with": {
+      "capBac": 1
+    }
+  },
+  "GiangVienThinhGiang": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 28,
+    "confused_with": {}
+  },
+  "GiangVien": {
+    "precision": 1.0,
+    "recall": 0.875,
+    "f1-score": 0.9333333333333333,
+    "support": 16,
+    "confused_with": {}
+  },
+  "time": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 17,
+    "confused_with": {}
+  },
+  "CBCS": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24,
+    "confused_with": {}
+  },
+  "ThuTruong": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 14,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.970954356846473,
+    "recall": 0.9831932773109243,
+    "f1-score": 0.9770354906054279,
+    "support": 238
+  },
+  "macro avg": {
+    "precision": 0.9677483164983164,
+    "recall": 0.9849736590038315,
+    "f1-score": 0.97515532528801,
+    "support": 238
+  },
+  "weighted avg": {
+    "precision": 0.9729916815210933,
+    "recall": 0.9831932773109243,
+    "f1-score": 0.9772490154841237,
+    "support": 238
+  },
+  "accuracy": 0.9929022082018928
+}

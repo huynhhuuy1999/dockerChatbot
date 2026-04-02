@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rasa 3.6 Socket.IO Test</title>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        #chat-box {
+            border: 1px solid #ccc;
+            height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .user {
+            color: blue;
+            text-align: right;
+        }
+
+        .bot {
+            color: green;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Rasa 3.6 Chat Widget Test</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="msg-input" placeholder="Nhập tin nhắn..."
+        onkeydown="if(event.key === 'Enter') sendMessage()">
+    <button onclick="sendMessage()">Gửi</button>
+
+    <script>
+        // 1. Kết nối đến Rasa Server
+        // Lưu ý: Thay đổi URL nếu bạn không chạy trên localhost:5005
+        const socket = io("http://localhost:5005");
+
+        const chatBox = document.getElementById('chat-box');
+
+        // 2. Sự kiện khi kết nối thành công
+        socket.on('connect', () => {
+            console.log("Đã kết nối với Rasa Server! ID:", socket.id);
+            addMessage("System", "Connected to server.", "bot");
+        });
+
+        // 3. Sự kiện khi kết nối thất bại
+        socket.on('connect_error', (error) => {
+            console.error("Lỗi kết nối:", error);
+            addMessage("System", "Connection failed. Check console.", "bot");
+        });
+
+        // 4. Nhận tin nhắn từ Bot (bot_uttered)
+        socket.on('bot_uttered', (data) => {
+            console.log("Bot phản hồi:", data);
+            if (data.text) {
+                addMessage("Bot", data.text, "bot");
+            }
+            // Xử lý thêm hình ảnh/buttons nếu cần tại đây
+        });
+
+        // 5. Gửi tin nhắn đi (user_uttered)
+        function sendMessage() {
+            const input = document.getElementById('msg-input');
+            const message = input.value;
+            if (!message) return;
+
+            // Hiển thị tin nhắn user
+            addMessage("You", message, "user");
+
+            // Gửi event 'user_uttered' theo đúng định dạng Rasa yêu cầu
+            socket.emit('user_uttered', {
+                "message": message,
+                "session_id": socket.id // Hoặc một ID cố định nếu muốn giữ session
+            });
+
+            input.value = '';
+        }
+
+        function addMessage(sender, text, className) {
+            const div = document.createElement('div');
+            div.className = className;
+            div.innerHTML = `<strong>${sender}:</strong> ${text}`;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>

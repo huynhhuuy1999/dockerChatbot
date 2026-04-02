@@ -1,0 +1,67 @@
+version: "3.1"
+stories:
+- story: sad path 1 (./tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: chaohoi: hello
+  - action: utter_greet  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_fallback_ollama_phogpt
+  - action: utter_did_that_help  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: affirm  # predicted: nlu_fallback: yes
+  - action: utter_happy  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: sad path 2 (./tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: chaohoi: hello
+  - action: utter_greet  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_fallback_ollama_phogpt
+  - action: utter_did_that_help  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: deny  # predicted: nlu_fallback: not really
+  - action: utter_goodbye  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: sad path 3 (./tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: chaohoi: hi
+  - action: utter_greet  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: mood_unhappy  # predicted: nlu_fallback: very terrible
+  - action: utter_cheer_up  # predicted: action_fallback_ollama_phogpt
+  - action: utter_did_that_help  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: deny  # predicted: inform: [no](chucDanh)
+  - action: utter_goodbye  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: say goodbye (./tests/test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: tambiet: bye-bye!
+  - action: utter_goodbye  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: bot challenge (./tests/test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: nlu_fallback: are you a bot?
+  - action: utter_iamabot  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: happy path 1 (./.venv/lib/python3.9/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: chaohoi: hello there!
+  - action: utter_greet  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: mood_great  # predicted: inform: amazing
+  - action: utter_happy  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+- story: happy path 2 (./.venv/lib/python3.9/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: chaohoi: hello there!
+  - action: utter_greet  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: mood_great  # predicted: inform: amazing
+  - action: utter_happy  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt
+  - intent: goodbye  # predicted: tambiet: bye-bye!
+  - action: utter_goodbye  # predicted: action_fallback_ollama_phogpt
+  - action: action_listen  # predicted: action_fallback_ollama_phogpt

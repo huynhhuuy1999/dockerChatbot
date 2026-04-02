@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+  - rule: Kích hoạt form trường hợp chức danh giảng dạy
+    steps:
+      - intent: CacTruongHopBoNhiemBaiNhiemChucDanhGiangDay
+      - action: truongHopChucDanhGiangDay_form
+      - active_loop: truongHopChucDanhGiangDay_form
+  - rule: Hoàn tất form trường hợp chức danh giảng dạy
+    condition:
+      - active_loop: truongHopChucDanhGiangDay_form
+    steps:
+      - action: truongHopChucDanhGiangDay_form
+      - active_loop: null
+      - action: actionBaseWithEntityForm
+  - rule: Kích hoạt form thời điểm chức danh giảng dạy
+    steps:
+      - intent: ThoiDiemXetBoNhiemBaiNhiemChucDanhGiangDay
+      - action: thoiDiemChucDanhGiangDay_form
+      - active_loop: thoiDiemChucDanhGiangDay_form
+  - rule: Hoàn tất form thời điểm chức danh giảng dạy
+    condition:
+      - active_loop: thoiDiemChucDanhGiangDay_form
+    steps:
+      - action: thoiDiemChucDanhGiangDay_form
+      - active_loop: null
+      - action: actionBaseWithEntityForm
+  - rule: Kích hoạt form chức danh giảng dạy
+    steps:
+      - intent: HoiVeNhiemVuChucDanhGiangDay
+      - action: chucDanhGiangDay_form
+      - active_loop: chucDanhGiangDay_form
+  - rule: Hoàn tất form chức danh giảng dạy
+    condition:
+      - active_loop: chucDanhGiangDay_form
+    steps:
+      - action: chucDanhGiangDay_form
+      - active_loop: null
+      - action: actionBaseWithEntityForm
+  - rule: Kích hoạt form cấp bậc hội đồng
+    steps:
+      - intent: HoiVeHoiDong
+      - action: capBacHoiDong_form
+      - active_loop: capBacHoiDong_form
+  - rule: Hoàn tất form cấp bậc hội đồng
+    condition:
+      - active_loop: capBacHoiDong_form
+    steps:
+      - action: capBacHoiDong_form
+      - active_loop: null
+      - action: actionBaseWithEntityForm
+  - rule: Kích hoạt form chức danh bổ nhiệm
+    steps:
+      - intent: QuyTrinhBoNhiemChucDanh
+      - action: chucDanhBoNhiem_form
+      - active_loop: chucDanhBoNhiem_form
+  - rule: Hoàn tất form chức danh bổ nhiệm
+    condition:
+      - active_loop: chucDanhBoNhiem_form
+    steps:
+      - action: chucDanhBoNhiem_form
+      - active_loop: null
+      - action: actionBaseWithEntityForm

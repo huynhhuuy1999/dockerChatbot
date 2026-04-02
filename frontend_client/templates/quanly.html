@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <!-- <link rel="stylesheet" href="style.css"> -->
+   <title>Trang chủ</title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+   :root {
+      --yellow: #fed330;
+      --red: #e74c3c;
+      --white: #fff;
+      --black: #222;
+      --light-color: #777;
+      --border: .2rem solid var(--black);
+   }
+
+   * {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+   }
+
+   *::selection {
+      background-color: var(--yellow);
+      color: var(--black);
+   }
+
+   ::-webkit-scrollbar {
+      height: .5rem;
+      width: 1rem;
+   }
+
+   .title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 4rem;
+      color: var(--black);
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+   }
+
+   ::-webkit-scrollbar-track {
+      background-color: transparent;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: var(--black);
+   }
+
+   section {
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 2rem;
+   }
+
+   .category .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+      gap: 1.5rem;
+      align-items: flex-start;
+   }
+
+
+
+   .products .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 33rem);
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5rem;
+   }
+
+   .products .box-container .box {
+      border: var(--border);
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      height: 150px;
+   }
+
+   .products .box-container .box .name {
+      font-size: 2rem;
+      color: var(--black);
+      margin: 1rem 0;
+   }
+</style>
+
+<body>
+   <h1 class="title">Trang chủ</h1>
+   <section class="products">
+      <div class="box-container">
+         <div class="box">
+            <div class="name"><a href='/nganh'>Quản lý ngành học</a></div>
+         </div>
+         {% for record in data %}
+
+         <div class="box">
+            <div class="name"><a href="/intent/{{ record[0]}}">{{ record[1] }}</a></div>
+         </div>
+         {% endfor %}
+
+         <div class="box-container">
+   </section>
+
+</body>
+
+</html>

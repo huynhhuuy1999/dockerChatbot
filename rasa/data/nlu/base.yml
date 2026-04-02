@@ -1,0 +1,126 @@
+version: "3.1"
+
+nlu:
+  - synonym: GiangVien
+    examples: |
+      - giảng viên
+  - synonym: CBCS
+    examples: |
+      - cán bộ chiến sĩ
+      - cán bộ, chiến sĩ
+      - cbcs
+  - synonym: GiangVienThinhGiang
+    examples: |
+      - giảng viên thỉnh giảng
+      - giảng viên t.giang
+  - synonym: ThuTruong
+    examples: |
+      - thủ trưởng
+  - synonym: PhoThuTruong
+    examples: |
+      - phó thủ trưởng
+  - synonym: HieuTruong
+    examples: |
+      - hiệu trưởng
+  - synonym: QuyCheLamViecCuaTruong
+    examples: |
+      - quy chế làm việc của trường
+      - Quy định làm việc của trường
+      - quy chế lam viec
+      - quy che lam viec
+      - quy che lam viec cua truong
+      - quy chế làm việc của trường là
+      - quy chế làm việc cảu trường
+      - quy địnhh làmm việc của trường
+  - synonym: TT17
+    examples: |
+      - Thông tư 17
+      - thông tư số 17
+      - TT số 17
+      - quy định bổ nhiệm, bãi nhiệm
+      - quy định về bổ nhiệm, bãi nhiệm, miễn nhiệm các chức danh giảng dạy trong CAND
+  - lookup: document_name
+    examples: |
+      - quy chế làm việc của trường
+      - quy định làm việc của trường
+      - quy chế lam viec
+      - quy che lam viec cua truong
+      - quy chế làm việc của trường là
+      - quy chế làm việc cảu trường
+      - quy địnhh làmm việc của trường
+      - thông tư 17
+      - Thông tư 17
+      - thông tư số 17
+      - TT số 17
+      - quy định bổ nhiệm, bãi nhiệm
+      - quy định về bổ nhiệm, bãi nhiệm, miễn nhiệm các chức danh giảng dạy trong CAND
+  - regex: PhoThuTruong
+    examples: |
+      - phó\s+thủ\s+trưởng
+      - phó\s+thủ\s+trưởng\s+\w+
+  - regex: GiangVienThinhGiang
+    examples: |
+      - (?i)giảng\s*viên\s*thỉnh\s*giảng
+      - (?i)gv\s*thỉnh\s*giảng
+      - (?i)giang\s*vien\s*thinh\s*giang
+  - regex: CBCS
+    examples: |
+      - (?i)\bcbcs\b
+      - (?i)cán\s*bộ\s*,?\s*chiến\s*sĩ
+      - (?i)can\s*bo\s*,?\s*chien\s*si
+  - regex: article_number
+    examples: |
+      - \d+
+
+  - intent: chaohoi
+    examples: |
+      - hey
+      - hello
+      - hi
+      - chào bạn
+      - chào buổi sáng
+      - chào buổi chiều
+      - chào buổi tối
+      - xin chào
+      - chào
+
+  - intent: tambiet
+    examples: |
+      - bye
+      - tạm biệt
+      - hẹn gặp lại
+      - hẹn lần sau
+      - gặp lại sau
+  - intent: out_out_scope
+    examples: |
+      - Việt Nam có những loài hoa nào?
+      - Thủ đô của Việt Nam là gì?
+      - Ai là người sáng lập ra Facebook?
+      - Mặt trời mọc từ hướng nào?
+      - Hôm nay là thứ mấy?
+  - intent: inform
+    examples: |
+      - [giảng viên](GiangVien)
+      - là [giảng viên](GiangVien)
+      - [giảng viên thỉnh giảng](GiangVienThinhGiang)
+      - của [giảng viên thỉnh giảng](GiangVienThinhGiang)
+      - [cán bộ chiến sĩ](CBCS)
+      - cho [cán bộ chiến sĩ](CBCS)
+      - [hiệu trưởng](HieuTruong)
+      - [thủ trưởng](ThuTruong)
+      - [phó thủ trưởng](PhoThuTruong)
+      - [năm](time)
+      - [học kỳ](time)
+      - [tháng](time)
+      - [quý](time)
+      - [tuần](time)
+      - [miễn nhiệm](actionTT17)
+      - là [bổ nhiệm](actionTT17)
+      - [bãi nhiệm](actionTT17)
+      - [giảng viên chính](chucDanh)
+      - [trợ giảng](chucDanh)
+      - [giáo viên](chucDanh)
+      - [trợ giảng](chucDanh)
+      - [giáo viên cao cấp](chucDanh)
+      - [cấp trường](capBac)
+      - [cấp bộ](capBac)

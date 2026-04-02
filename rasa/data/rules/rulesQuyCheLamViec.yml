@@ -1,0 +1,107 @@
+version: "3.1"
+
+rules:
+  - rule: ToChucNghiLe
+    steps:
+      - intent: ToChucNghiLe
+      - action: customActionBase
+  - rule: Kích hoạt form trách nhiệm
+    steps:
+      - intent: trach_nhiem_va_quyen_han
+      - action: trach_nhiem_quyen_han_form
+      - active_loop: trach_nhiem_quyen_han_form
+  - rule: Hoàn tất form trách nhiệm và quyền hạn
+    condition:
+      - active_loop: trach_nhiem_quyen_han_form
+    steps:
+      - action: trach_nhiem_quyen_han_form
+      - active_loop: null
+      - action: trachNhiemVaQuyenHanAction
+  - rule: NguyenTacLamViec
+    steps:
+      - intent: NguyenTacLamViec
+      - action: customActionBase
+  - rule: ThamQuyenPheDuyetHop
+    steps:
+      - intent: ThamQuyenPheDuyetHop
+      - action: customActionBase
+  - rule: Kích hoạt form trách nhiệm tiếp cán bộ chiến sĩ
+    steps:
+      - intent: TrachNhiemTiepCBCS
+      - action: trachNhiemTiepCBCS_form
+      - active_loop: trachNhiemTiepCBCS_form
+  - rule: Hoàn tất form trách nhiệm tiếp cán bộ chiến sĩ
+    condition:
+      - active_loop: trachNhiemTiepCBCS_form
+    steps:
+      - action: trachNhiemTiepCBCS_form
+      - active_loop: null
+      - action: trachNhiemTiepCBCSAction
+  - rule: LoaiHoiNghiVaHop
+    steps:
+      - intent: LoaiHoiNghiVaHop
+      - action: customActionBase
+  - rule: LoaiChuongTrinhCongTac
+    steps:
+      - intent: LoaiChuongTrinhCongTac
+      - action: customActionBase
+  - rule: Kích hoạt form phạm vi giải quyết công việc
+    steps:
+      - intent: pham_vi_giai_quyet_cong_viec
+      - action: pham_vi_giai_quyet_cong_viec_form
+      - active_loop: pham_vi_giai_quyet_cong_viec_form
+  - rule: Hoàn tất form phạm vi giải quyết công việc
+    condition:
+      - active_loop: pham_vi_giai_quyet_cong_viec_form
+    steps:
+      - action: pham_vi_giai_quyet_cong_viec_form
+      - active_loop: null
+      - action: phamViGiaiQuyetCongViecAction
+  - rule: TrinhTuToChucHop
+    steps:
+      - intent: TrinhTuToChucHop
+      - action: customActionBase
+  - rule: Kích hoạt form thời gian chương trình công tác
+    steps:
+      - intent: quy_trinh_xay_dung_chuong_trinh_cong_tac
+      - action: quyTrinhXayDungChuongTrinhCongTac_form
+      - active_loop: quyTrinhXayDungChuongTrinhCongTac_form
+  - rule: Hoàn tất form thời gian chương trình công tác
+    condition:
+      - active_loop: quyTrinhXayDungChuongTrinhCongTac_form
+    steps:
+      - action: quyTrinhXayDungChuongTrinhCongTac_form
+      - active_loop: null
+      - action: quyTrinhXayDungChuongTrinhCongTacAction
+  - rule: NguyenTacToChucHop
+    steps:
+      - intent: NguyenTacToChucHop
+      - action: customActionBase
+  - rule: CanCuXayDungChuongTrinhCongTac
+    steps:
+      - intent: CanCuXayDungChuongTrinhCongTac
+      - action: customActionBase
+  - rule: TrinhVaKyVanBan
+    steps:
+      - intent: TrinhVaKyVanBan
+      - action: customActionBase
+  - rule: ThamQuyenDuyetVaKyVanBan
+    steps:
+      - intent: ThamQuyenDuyetVaKyVanBan
+      - action: customActionBase
+  - rule: TieuChuanChucDanhGiangDay
+    steps:
+      - intent: TieuChuanChucDanhGiangDay
+      - action: customActionBase
+  - rule: ThamQuyenBoNhiemBaiNhiemChucDanhGiangDay
+    steps:
+      - intent: ThamQuyenBoNhiemBaiNhiemChucDanhGiangDay
+      - action: customActionBase
+  - rule: NguyenTacBoNhiemBaiNhiemChucNangGiangDay
+    steps:
+      - intent: NguyenTacBoNhiemBaiNhiemChucNangGiangDay
+      - action: customActionBase
+  - rule: HoSoThuTucMienNhiemBaiNhiemChucDanhGiangDay
+    steps:
+      - intent: HoSoThuTucMienNhiemBaiNhiemChucDanhGiangDay
+      - action: customActionBase

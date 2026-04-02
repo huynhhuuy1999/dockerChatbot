@@ -1,0 +1,1922 @@
+[
+  {
+    "text": "Trách nhiệm và quyền hạn của giảng viên là gì?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 39,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 29,
+        "end": 39,
+        "confidence_entity": 0.5455917119979858,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Nói cho tôi biết về trách nhiệm và quyền hạn của giảng viên",
+    "entities": [
+      {
+        "start": 49,
+        "end": 59,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 49,
+        "end": 59,
+        "confidence_entity": 0.5322244167327881,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Giảng viên có trách nhiệm gì?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.5995481014251709,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trách nhiệm của giảng viên, không phải giảng viên thỉnh giảng là gì?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 26,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVienThinhGiang",
+        "start": 39,
+        "end": 61,
+        "value": "GiangVienThinhGiang",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trách nhiệm thủ trưởng trong tiếp cán bộ chiến sĩ là gì?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 22,
+        "value": "thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CBCS",
+        "start": 34,
+        "end": 49,
+        "value": "CBCS",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ThuTruong",
+        "start": 12,
+        "end": 22,
+        "confidence_entity": 0.5663982033729553,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trách nhiệm hiệu trưởng trong tiếp cán bộ chiến sĩ là gì?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "hiệu trưởng",
+        "entity": "HieuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CBCS",
+        "start": 35,
+        "end": 50,
+        "value": "CBCS",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "HieuTruong",
+        "start": 12,
+        "end": 23,
+        "confidence_entity": 0.66,
+        "value": "HieuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy định về trách nhiệm thủ trưởng trong tiếp cán bộ chiến sĩ?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 34,
+        "value": "thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CBCS",
+        "start": 46,
+        "end": 61,
+        "value": "CBCS",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ThuTruong",
+        "start": 24,
+        "end": 34,
+        "confidence_entity": 0.6685060858726501,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy định về trách nhiệm hiệu trưởng trong tiếp cán bộ chiến sĩ?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 35,
+        "value": "hiệu trưởng",
+        "entity": "HieuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "CBCS",
+        "start": 47,
+        "end": 62,
+        "value": "CBCS",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "HieuTruong",
+        "start": 24,
+        "end": 35,
+        "confidence_entity": 0.66,
+        "value": "HieuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phạm vi giải quyết công việc của thủ trưởng là gì?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 43,
+        "value": "thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ThuTruong",
+        "start": 33,
+        "end": 43,
+        "confidence_entity": 0.662002444267273,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phạm vi giải quyết công việc của thủ trưởng đơn vị trực thuộc Trường?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 43,
+        "value": "thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ThuTruong",
+        "start": 33,
+        "end": 43,
+        "confidence_entity": 0.6744257807731628,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Thủ trưởng đơn vị trường có phạm vi giải quyết công việc như thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ThuTruong",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.7295622229576111,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Thủ trưởng đơn vị được quyền giải quyết những công việc nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ThuTruong",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.7309166789054871,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phạm vi giải quyết công việc của phó thủ trưởng là gì?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 47,
+        "value": "phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 47,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 50,
+        "value": "phó thủ trưởng là",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 47,
+        "confidence_entity": 0.7679783701896667,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phạm vi giải quyết công việc của phó thủ trưởng đơn vị trực thuộc Trường?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 47,
+        "value": "phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 47,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 51,
+        "value": "phó thủ trưởng đơn",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 33,
+        "end": 47,
+        "confidence_entity": 0.7528356313705444,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phó thủ trưởng đơn vị trường có phạm vi giải quyết công việc như thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 18,
+        "value": "Phó thủ trưởng đơn",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.454646497964859,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phó thủ trưởng chịu trách nhiệm trước ai?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 19,
+        "value": "Phó thủ trưởng chịu",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.4591456353664398,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phó thủ trưởng giúp việc cho Thủ trưởng như thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 19,
+        "value": "Phó thủ trưởng giúp",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.79,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ThuTruong",
+        "start": 29,
+        "end": 39,
+        "confidence_entity": 0.4972056448459625,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình xây dựng chương trình công tác năm như thế nào?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 44,
+        "value": "năm",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 41,
+        "end": 44,
+        "confidence_entity": 0.9983592629432678,
+        "value": "năm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trình tự xây dựng chương trình công tác năm?",
+    "entities": [
+      {
+        "start": 40,
+        "end": 43,
+        "value": "năm",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 40,
+        "end": 43,
+        "confidence_entity": 0.9992177486419678,
+        "value": "năm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình xây dựng chương trình công tác học kỳ ra sao?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 47,
+        "value": "học kỳ",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 41,
+        "end": 47,
+        "confidence_entity": 0.9948399662971497,
+        "value": "học kỳ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Khi nào xây dựng chương trình công tác học kỳ?",
+    "entities": [
+      {
+        "start": 39,
+        "end": 45,
+        "value": "học kỳ",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 39,
+        "end": 45,
+        "confidence_entity": 0.9952600598335266,
+        "value": "học kỳ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình xây dựng chương trình công tác tháng như thế nào?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 46,
+        "value": "tháng",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 41,
+        "end": 46,
+        "confidence_entity": 0.999224066734314,
+        "value": "tháng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Chương trình công tác tháng được xây dựng ra sao?",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "tháng",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 22,
+        "end": 27,
+        "confidence_entity": 0.9993466734886169,
+        "value": "tháng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình xây dựng chương trình công tác quý như thế nào?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 44,
+        "value": "quý",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 41,
+        "end": 44,
+        "confidence_entity": 0.9990610480308533,
+        "value": "quý",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trình tự xây dựng chương trình công tác quý?",
+    "entities": [
+      {
+        "start": 40,
+        "end": 43,
+        "value": "quý",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 40,
+        "end": 43,
+        "confidence_entity": 0.9993374943733215,
+        "value": "quý",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình xây dựng chương trình công tác tuần như thế nào?",
+    "entities": [
+      {
+        "start": 41,
+        "end": 45,
+        "value": "tuần",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 41,
+        "end": 45,
+        "confidence_entity": 0.9988976716995239,
+        "value": "tuần",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Điều 13 của quy chế làm việc nói gì?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "13",
+        "entity": "article_number"
+      },
+      {
+        "start": 12,
+        "end": 28,
+        "value": "quy chế làm việc",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "value": "13",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9798493385314941,
+        "value": "13",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 12,
+        "end": 28,
+        "confidence_entity": 0.6633523106575012,
+        "value": "quy chế làm việc",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Nội dung điều 100 trong thông tư 17",
+    "entities": [
+      {
+        "start": 14,
+        "end": 17,
+        "value": "100",
+        "entity": "article_number"
+      },
+      {
+        "start": 24,
+        "end": 35,
+        "value": "thông tư 17",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 14,
+        "end": 17,
+        "value": "100",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 33,
+        "end": 35,
+        "value": "17",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "document_name",
+        "start": 24,
+        "end": 35,
+        "value": "TT17",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9026114344596863,
+        "value": "100",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 24,
+        "end": 35,
+        "confidence_entity": 0.6391493678092957,
+        "value": "TT17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Điều 25 của thông tư số 17 quy định gì?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "25",
+        "entity": "article_number"
+      },
+      {
+        "start": 12,
+        "end": 26,
+        "value": "thông tư số 17",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "value": "25",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 24,
+        "end": 26,
+        "value": "17",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "document_name",
+        "start": 12,
+        "end": 26,
+        "value": "TT17",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9782349467277527,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 12,
+        "end": 23,
+        "confidence_entity": 0.9926590323448181,
+        "value": "thông tư số",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "article_number",
+        "start": 24,
+        "end": 26,
+        "confidence_entity": 0.6153295040130615,
+        "value": "17",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "document_name",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.5122089982032776,
+        "value": "quy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Nội dung điều 15 trong TT số 17",
+    "entities": [
+      {
+        "start": 14,
+        "end": 16,
+        "value": "15",
+        "entity": "article_number"
+      },
+      {
+        "start": 23,
+        "end": 31,
+        "value": "TT số 17",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 14,
+        "end": 16,
+        "value": "15",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 29,
+        "end": 31,
+        "value": "17",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "document_name",
+        "start": 23,
+        "end": 31,
+        "value": "TT17",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 14,
+        "end": 16,
+        "confidence_entity": 0.9006000757217407,
+        "value": "15",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 23,
+        "end": 31,
+        "confidence_entity": 0.6437320113182068,
+        "value": "TT17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Các trường hợp miễn nhiệm chức danh giảng dạy",
+    "entities": [
+      {
+        "start": 15,
+        "end": 25,
+        "value": "miễn nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 15,
+        "end": 25,
+        "confidence_entity": 0.9858167171478271,
+        "value": "miễn nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bãi nhiệm chức danh giảng dạy trong trường hợp nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "bãi nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9906213283538818,
+        "value": "bãi nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Các trường hợp bổ nhiệm chức danh giảng dạy",
+    "entities": [
+      {
+        "start": 15,
+        "end": 23,
+        "value": "bổ nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 15,
+        "end": 23,
+        "confidence_entity": 0.9875621795654297,
+        "value": "bổ nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Trường hợp nào bổ nhiệm chức danh giảng dạy",
+    "entities": [
+      {
+        "start": 15,
+        "end": 23,
+        "value": "bổ nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 15,
+        "end": 23,
+        "confidence_entity": 0.9887780547142029,
+        "value": "bổ nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Thời điểm xét bổ nhiệm chức danh giảng dạy",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "bổ nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.9859456419944763,
+        "value": "bổ nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Khi nào bãi nhiệm chức danh giảng dạy?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 17,
+        "value": "bãi nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 8,
+        "end": 17,
+        "confidence_entity": 0.9868487119674683,
+        "value": "bãi nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "miễn nhiệm chức danh giảng dạy vào thời điểm nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "miễn nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9873649477958679,
+        "value": "miễn nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Giảng viên có nhiệm vụ gì?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.5855591297149658,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Nhiệm vụ của trợ giảng là gì?",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "trợ giảng",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.4401085078716278,
+        "value": "trợ giảng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "các nhiệm vụ của giảng viên chính là gì?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 33,
+        "value": "giảng viên chính",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 17,
+        "end": 33,
+        "confidence_entity": 0.5794629454612732,
+        "value": "giảng viên chính",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tiêu chuẩn của giảng viên?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 25,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 15,
+        "end": 25,
+        "confidence_entity": 0.745931088924408,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "yêu cầu năng lực của trợ giảng?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "trợ giảng",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.909032940864563,
+        "value": "trợ giảng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "giảng viên chính cần có tiêu chuẩn như thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "giảng viên chính",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 16,
+        "confidence_entity": 0.6629860401153564,
+        "value": "giảng viên chính",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy định về hội đồng cấp trường",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "cấp trường",
+        "entity": "capBac"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "capBac",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9613147974014282,
+        "value": "cấp trường",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "hội đòng cấp bộ quy định thế nào?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "cấp bộ",
+        "entity": "capBac"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "capBac",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.8936668634414673,
+        "value": "cấp bộ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Những quy định về hội đồng cấp bộ?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 33,
+        "value": "cấp bộ",
+        "entity": "capBac"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "capBac",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9624363780021667,
+        "value": "cấp bộ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Quy trình bổ nhiệm chức danh giáo viên",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "giáo viên",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.4955517649650574,
+        "value": "giáo viên",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Giáo viên cao cấp có quy trình bổ nhiệm thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "Giáo viên cao cấp",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.5218930244445801,
+        "value": "Giáo viên cao",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "capBac",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.6022460460662842,
+        "value": "cấp",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Những quy định về bổ nhiệm trợ giảng",
+    "entities": [
+      {
+        "start": 27,
+        "end": 36,
+        "value": "trợ giảng",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 27,
+        "end": 36,
+        "confidence_entity": 0.9187174439430237,
+        "value": "trợ giảng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "giảng viên",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.5628184676170349,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "là giảng viên",
+    "entities": [
+      {
+        "start": 3,
+        "end": 13,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVien",
+        "start": 3,
+        "end": 13,
+        "confidence_entity": 0.7390205264091492,
+        "value": "GiangVien",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "hiệu trưởng",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "hiệu trưởng",
+        "entity": "HieuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "HieuTruong",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.5491296052932739,
+        "value": "HieuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "thủ trưởng",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "thủ trưởng",
+        "entity": "ThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ThuTruong",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.4700469970703125,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "năm",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "năm",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9934404492378235,
+        "value": "năm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "học kỳ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "học kỳ",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9866706728935242,
+        "value": "học kỳ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tháng",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "tháng",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9959771037101746,
+        "value": "tháng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "quý",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "quý",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9957355260848999,
+        "value": "quý",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "tuần",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "tuần",
+        "entity": "time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9976726174354553,
+        "value": "tuần",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "miễn nhiệm",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "miễn nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9917685985565186,
+        "value": "miễn nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "là bổ nhiệm",
+    "entities": [
+      {
+        "start": 3,
+        "end": 11,
+        "value": "bổ nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 3,
+        "end": 11,
+        "confidence_entity": 0.9939496517181396,
+        "value": "bổ nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bãi nhiệm",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "bãi nhiệm",
+        "entity": "actionTT17"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "actionTT17",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.986599862575531,
+        "value": "bãi nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "giảng viên chính",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "giảng viên chính",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 16,
+        "confidence_entity": 0.6998289823532104,
+        "value": "giảng viên chính",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "trợ giảng",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "trợ giảng",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.8223793506622314,
+        "value": "trợ giảng",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "giáo viên",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "giáo viên",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.66,
+        "value": "giáo viên",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "giáo viên cao cấp",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "giáo viên cao cấp",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 17,
+        "confidence_entity": 0.6500834822654724,
+        "value": "Giáo viên cao cấp",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "cấp trường",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "cấp trường",
+        "entity": "capBac"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "capBac",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.9645105004310608,
+        "value": "cấp trường",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "cấp bộ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "cấp bộ",
+        "entity": "capBac"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "capBac",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.962691068649292,
+        "value": "cấp bộ",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+.loginBody {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 380px;
+  border-radius: 16px;
+  padding: 30px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+.textHeader {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.form {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,0 +1,54 @@
+version: "3.1"
+
+nlu:
+  - intent: TieuChuanChucDanhGiangDay
+    examples: |
+      - Tiêu chuẩn chung của các chức danh giảng dạy??
+      - Một giảng viên cần có trình độ tối thiểu như thế nào để được tuyển dụng?
+      - Một giảng viên mới có bắt buộc phải có chứng chỉ nghiệp vụ sư phạm không?
+      - Giảng viên có bắt buộc phải có chứng chỉ ngoại ngữ theo chuẩn không?
+  - intent: ThamQuyenBoNhiemBaiNhiemChucDanhGiangDay
+    examples: |
+      - Ai có thẩm quyền bổ nhiệm, bãi nhiệm chức danh giảng dạy?
+      - Thẩm quyền bổ nhiệm chức danh giảng dạy thuộc về ai?
+      - Quy định về thẩm quyền bổ nhiệm, bãi nhiệm chức danh giảng dạy?
+  - intent: NguyenTacBoNhiemBaiNhiemChucNangGiangDay
+    examples: |
+      - Nguyên tắc bổ nhiệm, bãi nhiệm chức danh giảng dạy?
+      - Quy định về nguyên tắc bổ nhiệm, bãi nhiệm chức danh giảng dạy?
+      - Trường có quy định gì về nguyên tắc bổ nhiệm, bãi nhiệm chức danh giảng dạy?
+      - Nguyên tắc bổ nhiệm chức danh giảng dạy?
+  - intent: HoSoThuTucMienNhiemBaiNhiemChucDanhGiangDay
+    examples: |
+      - Hồ sơ, thủ tục miễn nhiệm, bãi nhiệm chức danh giảng dạy?
+      - Thủ tục miễn nhiệm chức danh giảng dạy?
+      - Hồ sơ miễn nhiệm chức danh giảng dạy gồm những gì?
+  - intent: CacTruongHopBoNhiemBaiNhiemChucDanhGiangDay
+    examples: |
+      - Các trường hợp [miễn nhiệm](actionTT17) chức danh giảng dạy
+      - [bãi nhiệm](actionTT17) chức danh giảng dạy trong trường hợp nào?
+      - Các trường hợp [bổ nhiệm](actionTT17) chức danh giảng dạy
+      - Trường hợp nào [bổ nhiệm](actionTT17) chức danh giảng dạy
+  - intent: ThoiDiemXetBoNhiemBaiNhiemChucDanhGiangDay
+    examples: |
+      - Thời điểm xét [bổ nhiệm](actionTT17) chức danh giảng dạy
+      - Khi nào [bãi nhiệm](actionTT17) chức danh giảng dạy?
+      - [miễn nhiệm](actionTT17) chức danh giảng dạy vào thời điểm nào?
+  - intent: HoiVeNhiemVuChucDanhGiangDay
+    examples: |
+      - [Giảng viên](GiangVien) có nhiệm vụ gì?
+      - Nhiệm vụ của [trợ giảng](chucDanh) là gì?
+      - các nhiệm vụ của [giảng viên chính](chucDanh) là gì?
+      - tiêu chuẩn của [giảng viên](GiangVien)?
+      - yêu cầu năng lực của [trợ giảng](chucDanh)?
+      - [giảng viên chính](chucDanh) cần có tiêu chuẩn như thế nào?
+  - intent: HoiVeHoiDong
+    examples: |
+      - Quy định về hội đồng [cấp trường](capBac)
+      - hội đòng [cấp bộ](capBac) quy định thế nào?
+      - Những quy định về hội đồng [cấp bộ](capBac)?
+  - intent: QuyTrinhBoNhiemChucDanh
+    examples: |
+      - Quy trình bổ nhiệm chức danh [giáo viên](chucDanh)
+      - [Giáo viên cao cấp](chucDanh) có quy trình bổ nhiệm thế nào?
+      - Những quy định về bổ nhiệm [trợ giảng](chucDanh)

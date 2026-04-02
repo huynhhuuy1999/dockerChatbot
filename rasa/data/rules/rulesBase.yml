@@ -1,0 +1,24 @@
+version: "3.1"
+
+rules:
+  - rule: chaohoi
+    steps:
+      - intent: chaohoi
+      - action: utter_chaohoi
+  - rule: tambiet
+    steps:
+      - intent: tambiet
+      - action: utter_tambiet
+  - rule: HoiVeDieu
+    steps:
+      - intent: HoiVeDieu
+      - action: hoiVeDieuAction
+  - rule: fallback
+    steps:
+      - intent: nlu_fallback
+      # - action: action_phogpt_fallback
+      - action: action_fallback_ollama_phogpt
+  - rule: OutOfScope
+    steps:
+      - intent: out_out_scope
+      - action: action_fallback_ollama_phogpt

@@ -1,0 +1,4 @@
+dotenv
+# rasa==3.6.16
+# rasa-sdk==3.6.2
+neo4j

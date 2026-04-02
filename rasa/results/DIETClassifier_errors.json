@@ -1,0 +1,341 @@
+[
+  {
+    "text": "Trách nhiệm của giảng viên, không phải giảng viên thỉnh giảng là gì?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 26,
+        "value": "giảng viên",
+        "entity": "GiangVien"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "GiangVienThinhGiang",
+        "start": 39,
+        "end": 61,
+        "value": "GiangVienThinhGiang",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Phó thủ trưởng giúp việc cho Thủ trưởng như thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Phó thủ trưởng",
+        "entity": "PhoThuTruong"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "value": "PhoThuTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 19,
+        "value": "Phó thủ trưởng giúp",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "PhoThuTruong",
+        "start": 0,
+        "end": 14,
+        "confidence_entity": 0.79,
+        "value": "PhoThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ThuTruong",
+        "start": 29,
+        "end": 39,
+        "confidence_entity": 0.4972056448459625,
+        "value": "ThuTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Điều 45 trong quy định làm việc của trường quy định gì?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "45",
+        "entity": "article_number"
+      },
+      {
+        "start": 14,
+        "end": 42,
+        "value": "quy định làm việc của trường",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "value": "45",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 14,
+        "end": 42,
+        "value": "QuyCheLamViecCuaTruong",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9789267182350159,
+        "value": "45",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 14,
+        "end": 42,
+        "confidence_entity": 0.878809928894043,
+        "value": "QuyCheLamViecCuaTruong",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 43,
+        "end": 46,
+        "confidence_entity": 0.8338220119476318,
+        "value": "quy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Điều 25 của thông tư số 17 quy định gì?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "25",
+        "entity": "article_number"
+      },
+      {
+        "start": 12,
+        "end": 26,
+        "value": "thông tư số 17",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "value": "25",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 24,
+        "end": 26,
+        "value": "17",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "document_name",
+        "start": 12,
+        "end": 26,
+        "value": "TT17",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "article_number",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9782349467277527,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 12,
+        "end": 23,
+        "confidence_entity": 0.9926590323448181,
+        "value": "thông tư số",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "article_number",
+        "start": 24,
+        "end": 26,
+        "confidence_entity": 0.6153295040130615,
+        "value": "17",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "document_name",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.5122089982032776,
+        "value": "quy",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Nội dung của điều 7 trong quy định về bổ nhiệm, bãi nhiệm, miễn nhiệm các chức danh giảng dạy trong CAND",
+    "entities": [
+      {
+        "start": 18,
+        "end": 19,
+        "value": "7",
+        "entity": "article_number"
+      },
+      {
+        "start": 26,
+        "end": 104,
+        "value": "quy định về bổ nhiệm, bãi nhiệm, miễn nhiệm các chức danh giảng dạy trong CAND",
+        "entity": "document_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "article_number",
+        "start": 18,
+        "end": 19,
+        "value": "7",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 26,
+        "end": 104,
+        "value": "TT17",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.7855191230773926,
+        "value": "của",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "article_number",
+        "start": 18,
+        "end": 19,
+        "confidence_entity": 0.8907855749130249,
+        "value": "7",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 26,
+        "end": 46,
+        "confidence_entity": 0.9883013367652893,
+        "value": "quy định về bổ nhiệm",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "document_name",
+        "start": 48,
+        "end": 57,
+        "confidence_entity": 0.9896076321601868,
+        "value": "bãi nhiệm",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "document_name",
+        "start": 59,
+        "end": 104,
+        "confidence_entity": 0.933788537979126,
+        "value": "miễn nhiệm các chức danh giảng dạy trong CAND",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Giáo viên cao cấp có quy trình bổ nhiệm thế nào?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "Giáo viên cao cấp",
+        "entity": "chucDanh"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "chucDanh",
+        "start": 0,
+        "end": 13,
+        "confidence_entity": 0.5218930244445801,
+        "value": "Giáo viên cao",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "capBac",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.6022460460662842,
+        "value": "cấp",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

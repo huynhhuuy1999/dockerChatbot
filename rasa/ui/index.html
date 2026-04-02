@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cổng Thông Tin Khoa Quản Lý Nhà Nước</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <img src="./img/AnhDangBo.jpg" alt="Cờ Đảng Bộ" />
+    <h1>Cổng Thông Tin Khoa Quản Lý Nhà Nước</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Đảng Bộ Trường Đại học An ninh nhân dân</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Chuyển đổi điều hướng">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Văn bản</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hoạt động</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nội dung chính -->
+  <main class="container main-content">
+    <div class="row">
+      <!-- Nội dung bài viết chính -->
+      <section class="col-lg-8 mb-4">
+        <article class="main-article">
+          <img src="./img/hoi nghi.jpg" alt="Hội nghị Đảng Bộ" />
+          <h2>Chào mừng đến với Cổng Thông Tin Đảng Bộ</h2>
+          <p>
+            Đây là nơi cập nhật các thông tin chính thức, văn bản, hoạt động và tin tức mới nhất của Đảng bộ.
+          </p>
+          <p>
+            Bạn có thể tìm kiếm các tài liệu, theo dõi các sự kiện và liên hệ với chúng tôi để được hỗ trợ.
+          </p>
+          <hr />
+          <h4>Tin nổi bật</h4>
+          <ul>
+            <li><a href="#">Hội nghị triển khai nhiệm vụ quý II năm 2024</a></li>
+            <li><a href="#">Kế hoạch phát triển kinh tế xã hội năm 2024</a></li>
+            <li><a href="#">Tuyên truyền về công tác phòng chống tham nhũng</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Sidebar tin tức -->
+      <aside class="col-lg-4">
+        <div class="sidebar">
+          <h5>
+            <img src="https://cdn-icons-png.flaticon.com/512/1250/1250683.png" alt="Tin tức icon" />
+            Tin tức mới
+          </h5>
+          <ul>
+            <li>
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=80&q=60"
+                alt="Thông báo" />
+              <a href="#">Thông báo về kỳ họp Đảng bộ</a>
+            </li>
+            <li>
+              <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=80&q=60"
+                alt="Báo cáo" />
+              <a href="#">Báo cáo công tác kiểm tra, giám sát</a>
+            </li>
+            <li>
+              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=80&q=60"
+                alt="Hoạt động" />
+              <a href="#">Hoạt động đoàn thanh niên Đảng bộ</a>
+            </li>
+            <li>
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=80&q=60"
+                alt="Bầu cử" />
+              <a href="#">Tuyên truyền bầu cử đại biểu Quốc hội</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar">
+          <h5>
+            <img src="https://cdn-icons-png.flaticon.com/512/1087/1087840.png" alt="Liên kết icon" />
+            Liên kết nhanh
+          </h5>
+          <ul>
+            <li><a href="#">Trang chủ Trung ương Đảng</a></li>
+            <li><a href="#">Văn bản pháp luật</a></li>
+            <li><a href="#">Cổng thông tin Chính phủ</a></li>
+            <li><a href="#">Hỗ trợ trực tuyến</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Nút mở chatbot -->
+  <!-- <button id="chatbotToggle" aria-label="Mở chatbot" title="Hỗ trợ trực tuyến">
+    💬
+  </button> -->
+
+  <!-- Chatbot container -->
+  <!-- <div id="chatbotContainer" role="dialog" aria-modal="true" aria-labelledby="chatbotHeader">
+    <div id="chatbotHeader">
+      <span>Chatbot Hỗ Trợ</span>
+      <button id="chatbotClose" aria-label="Đóng chatbot">&times;</button>
+    </div>
+    <div id="chatbotMessages" aria-live="polite" aria-relevant="additions"></div>
+    <form id="chatbotInputForm" autocomplete="off">
+      <textarea id="chatbotInput" placeholder="Nhập tin nhắn..." rows="1" required></textarea>
+      <button type="submit" id="chatbotSendBtn" aria-label="Gửi tin nhắn">Gửi</button>
+    </form>
+  </div> -->
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Rasa Webchat Widget -->
+  <script>!(function () {
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src = "./js/cdn.js"),
+        // "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+        // Hoặc dùng bản mới hơn nếu bản trên không chạy:
+        // "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"
+        (e.async = !0),
+        (e.onload = () => {
+          window.WebChat.default(
+            {
+              selector: "#webchat",
+              initPayload: "/get_started", // Intent gửi đi khi mở widget lần đầu
+              customData: { "language": "vi" }, // Dữ liệu tùy chỉnh gửi kèm
+              socketUrl: "http://localhost:5005", // Địa chỉ Rasa Server
+              socketPath: "/socket.io/",
+              title: "Trợ lý ảo",
+              subtitle: "Đang trực tuyến",
+              inputTextFieldHint: "Nhập tin nhắn...",
+              connectingText: "Đang kết nối...",
+              hideWhenNotConnected: false, // Giữ false để debug lỗi kết nối dễ hơn
+              fullScreenMode: false,
+              profileAvatar: "https://cdn-icons-png.flaticon.com/512/4712/4712035.png",
+              params: {
+                images: {
+                  dims: {
+                    width: 300,
+                    height: 300,
+                  },
+                },
+                storage: "session", // "local" hoặc "session"
+              },
+              mainColor: "#b71c1c",
+              userBackgroundColor: "#b71c1c"
+            },
+            null
+          );
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+  </script>
+
+
+  <!-- Chatbot script (mở rộng chức năng) -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
