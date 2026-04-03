@@ -30,6 +30,7 @@ g) Thực hiện những nhiệm vụ khác do Hiệu trưởng hoặc Phó Hi�
 ","","Điều 7","PhoThuTruong","","","","","",,,
 "10",":Intent","","","","","","TrachNhiemVaQuyenHan","","Trách nhiệm và quyền hạn","",,,
 "11",":Entity","","","","","","CBCS","","Cán bộ chiến sĩ","",,,
+"12",":Intent","","","","","","test","","text","",,,
 "13",":Entity","","","","","","","","giảng viên thỉnh giảng","",,,
 "14",":Answer","Cán bộ, chiến sĩ là người trực tiếp thực hiện các chủ trương, mệnh lệnh, chương trình, kế hoạch công tác của lãnh đạo cấp trên khi được phân công và phải có trách nhiệm với công việc được giao, thường xuyên báo cáo cho lãnh đạo cấp trên biết kết quả thực hiện công việc. Cán bộ, chiến sĩ của Trường ngoài những quyền lợi và nghĩa vụ theo quy định của pháp luật, của Bộ Công an còn có những trách nhiệm và quyền hạn sau: 
 1. Chấp hành nghiêm chỉnh đường lối, chủ trương, chính sách của Đảng, pháp luật của Nhà nước, nghị quyết, chỉ thị, quy chế, quy định của Bộ Công an, Điều lệnh Công an nhân dân và các quy chế, nội quy, quy định của Trường. 
@@ -555,6 +556,7 @@ d) Hội đồng báo cáo kết quả họp xét và xin ý kiến lãnh đạo
 ,,,,,,,,,,,"74","94","GOM"
 ,,,,,,,,,,,"74","97","GOM"
 ,,,,,,,,,,,"74","99","GOM"
+,,,,,,,,,,,"75","12","HAS_INTENT"
 ,,,,,,,,,,,"75","76","HAS_INTENT"
 ,,,,,,,,,,,"75","77","HAS_INTENT"
 ,,,,,,,,,,,"75","82","HAS_INTENT"
