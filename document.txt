@@ -1,0 +1,11 @@
+- Setup Docker
+- Load file tar từ docker:
+    docker load -i chatbot_offline_project.tar
+- Khởi chạy docker-compose:
+    docker-compose up -d --build
+- Khi update data từ file .dump (load data from file .dump in folder import):
+    cypher-shell -u neo4j -p 123456789 -f /var/lib/neo4j/import/dump.cypher
+- Xóa container khi update source code (delete volumns database):
+    docker-compose down -v
+- Đóng gói source code build docker:
+    docker save -o chatbot_project.tar neo4j:latest rasachatbot-frontend:latest rasachatbot-rasa:latest rasachatbot-action_server:latest rasachatbot-backend:latest rasachatbot-frontend_client:latest 
