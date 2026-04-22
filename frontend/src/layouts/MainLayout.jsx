@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import style from "./style.module.scss";
 import { Button, Modal } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const listAction = [
   { path: "/", name: "Quản lý Answer", title: "Cập nhật câu trả lời" },
@@ -13,6 +13,13 @@ export const MainLayout = () => {
   const path = location.pathname;
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState("Cập nhật câu trả lời");
+
+  useEffect(() => {
+    const isLogin = localStorage.getItem("admin_login");
+    if (!isLogin) {
+      // window.location.href = "/login";
+    }
+  }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("admin_login");

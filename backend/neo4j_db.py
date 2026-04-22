@@ -1,5 +1,7 @@
 from neo4j import GraphDatabase
 
+# URI = "bolt://localhost:7687"
+# Khi chạy docker thì dùng cái dưới
 URI = "bolt://neo4j:7687"
 USER = "neo4j"
 PASSWORD = "123456789"

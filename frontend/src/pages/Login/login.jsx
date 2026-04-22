@@ -32,7 +32,7 @@ export const Login = () => {
 
         <input
           value={user}
-          class="form-control mb-3"
+          className="form-control mb-3"
           placeholder="Username"
           onChange={(e) => setUser(e.target.value)}
         />
@@ -40,16 +40,16 @@ export const Login = () => {
           value={pass}
           id="pass"
           type="password"
-          class="form-control mb-4"
+          className="form-control mb-4"
           placeholder="Password"
           onChange={(e) => setPass(e.target.value)}
         />
 
-        <button class="btn btn-primary w-100" onClick={onLogin}>
+        <button className="btn btn-primary w-100" onClick={onLogin}>
           Đăng nhập
         </button>
 
-        <div id="msg" class="text-danger mt-3 text-center"></div>
+        <div id="msg" className="text-danger mt-3 text-center"></div>
       </div>
     </div>
   );

@@ -2,3 +2,5 @@ __pycache__
 yarn.lock
 .rasa
 chatbot_project.tar
+.venv
+node_modules

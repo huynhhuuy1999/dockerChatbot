@@ -97,7 +97,7 @@ export const Home = () => {
           id="searchInput"
           className="form-control"
           placeholder="🔍 Tìm kiếm Intent..."
-          onkeyup="searchIntent()"
+          // onkeyup="searchIntent()"
         />
       </div>
 
