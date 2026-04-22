@@ -4,10 +4,19 @@
 - Khởi chạy docker-compose: (áp dụng cho file docker-compose.yml)
     docker-compose up -d --build
 - Khi update data từ file .dump (load data from file .dump in folder import):
-    cypher-shell -u neo4j -p 123456789 -f /var/lib/neo4j/import/dump.cypher
+    cypher-shell -u neo4j -p 123456789 -f /var/lib/neo4j/import/export.cypher
 - Xóa container khi update source code (delete volumns database):
     docker-compose down -v
 - Đóng gói source code build docker:
     docker save -o chatbot_project.tar neo4j:latest rasachatbot-frontend:latest rasachatbot-rasa:latest rasachatbot-action_server:latest rasachatbot-backend:latest rasachatbot-frontend_client:latest 
 - Chạy docker-compose.dev.yml có hot reload:
      docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+     docker-compose -f docker-compose.dev.yml up (không phải merge với docker-compose base nữa)
+
+* Quy trình update data không cần docker-compose down -v
++ Vào cypher-shell:
+MATCH (n) DETACH DELETE n;
+SHOW CONSTRAINT;
+DROP CONSTRAINT dieu_name_content_unique;
++ Thoát cypher-shell:
+cypher-shell -u neo4j -p 123456789 -f /var/lib/neo4j/import/export.cypher

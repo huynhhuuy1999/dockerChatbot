@@ -3,6 +3,8 @@ import style from "./home.module.scss";
 import axios from "axios";
 import { Button, Modal, Pagination } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { TypeNoti } from "../../utils/constants";
+import { Notification } from "../../components";
 export const Home = () => {
   const [listIntent, setListIntent] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -55,26 +57,18 @@ export const Home = () => {
       .then((resp) => {
         if (resp.status === "success") {
           setShow(false);
-          // Hiển thị alert đẹp với SweetAlert2
-          Swal.fire({
-            icon: "success",
-            title: "Cập nhật thành công",
-            text: "Answer đã được lưu vào hệ thống",
-            confirmButtonText: "OK",
-            confirmButtonColor: "#198754",
-            timer: 2000,
-            timerProgressBar: true,
+          Notification({
+            type: TypeNoti.success,
+            title: "Answer đã được lưu vào hệ thống",
           });
         } else {
-          Swal.fire({
-            icon: "error",
-            title: "Lỗi",
-            text: "Không thể lưu dữ liệu!",
+          Notification({
+            type: TypeNoti.error,
+            title: "Không thể lưu dữ liệu!",
           });
         }
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
         Swal.fire({
           icon: "error",
           title: "Lỗi mạng",
@@ -120,8 +114,7 @@ export const Home = () => {
                     <td>
                       <button
                         class="btn btn-sm btn-outline-primary"
-                        // onClick="openModal(${i})"
-                        onClick={() => openModal(i)}
+                        onClick={() => openModal(indexOfFirstItem + i)}
                       >
                         <i class="bi bi-pencil-square"></i> Cập nhật
                       </button>

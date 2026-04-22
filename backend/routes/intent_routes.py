@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from neo4j_db import get_all_intents, driver
+from utils.response import response_success
 
 # Khởi tạo Blueprint
 intent_bp = Blueprint("intent_bp", __name__)
@@ -19,7 +20,7 @@ def update():
     WHERE $entity IS NULL OR a.entity = $entity
     SET a.answer = $answer
     """
-    print("query", query)
+
     with driver.session(database="test") as session:
         for item in data["entities"]:
             session.run(
@@ -29,4 +30,4 @@ def update():
                 answer=item["answer"],
             )
 
-    return {"status": "success"}
+    return response_success()

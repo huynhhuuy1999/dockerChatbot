@@ -1,6 +1,9 @@
 from flask import Blueprint, request, jsonify
 from utils.security import hash_password, check_password
 from neo4j_db import get_all_accounts, driver
+from utils.response import response_success, response_error
+from neo4j.exceptions import ConstraintError
+from utils.constants import STATUS
 
 auth_bp = Blueprint("auth_bp", __name__)
 
@@ -20,17 +23,21 @@ def login():
     MATCH (a:ADMIN {username:$username})
     RETURN a.password AS password
     """
+    try:
+        with driver.session(database="test") as session:
 
-    with driver.session(database="test") as session:
+            resultUser = session.run(query, username=username)
+            recordUser = resultUser.single()
+            check = check_password(password, recordUser["password"])
 
-        resultUser = session.run(query, username=username)
-        recordUser = resultUser.single()
-        check = check_password(password, recordUser["password"])
-
-        if check:
-            return jsonify({"status": "success", "user": recordUser["password"]})
-        else:
-            return jsonify({"status": "fail"}), 401
+            if check:
+                return response_success(user=recordUser["password"])
+            else:
+                return response_error(
+                    error="Sai mật khẩu", status_code=STATUS["UNAUTHORIZED"]
+                )
+    except:
+        return response_error(error="Lỗi đăng nhập", status_code=STATUS["UNAUTHORIZED"])
 
 
 @auth_bp.route("/api/register", methods=["POST"])
@@ -55,18 +62,19 @@ def register():
         resultCheck = session.run(queryCheck, username=username)
         recordCheck = resultCheck.single()
         if recordCheck:
-            return (
-                jsonify({"status": "fail", "message": "Username already exists"}),
-                400,
+            return response_error(
+                error="Username đã tồn tại", status_code=STATUS["BAD_REQUEST"]
             )
 
         result = session.run(query, username=username, password=newPassword)
         record = result.single()
 
         if record:
-            return jsonify({"status": "success", "user": record["user"]})
+            return response_success(user=record["user"])
         else:
-            return jsonify({"status": "fail"}), 401
+            return response_error(
+                error="Đăng ký thất bại", status_code=STATUS["BAD_REQUEST"]
+            )
 
 
 @auth_bp.route("/api/update_account", methods=["POST"])
@@ -77,7 +85,9 @@ def update_account():
     new_password = data.get("password")
     isUpdatePassword = data.get("isUpdatePassword")
     if not new_password:
-        return jsonify({"status": "fail", "message": "Password is required"}), 400
+        return response_error(
+            error="Mật khẩu không được trống", status_code=STATUS["BAD_REQUEST"]
+        )
     if isUpdatePassword == True:
         hashed_password = hash_password(new_password).decode("utf-8")
     elif isUpdatePassword == False:
@@ -88,17 +98,24 @@ def update_account():
     SET a.password = $password, a.username = $new_UserName
     RETURN a.username AS user
     """
+    try:
+        with driver.session(database="test") as session:
+            result = session.run(
+                query,
+                username=username,
+                password=hashed_password,
+                new_UserName=new_UserName,
+            )
+            record = result.single()
 
-    with driver.session(database="test") as session:
-        result = session.run(
-            query,
-            username=username,
-            password=hashed_password,
-            new_UserName=new_UserName,
+            if record:
+                return response_success(user=record["user"])
+            else:
+                return response_error(
+                    error="Cập nhật tài khoản thất bại",
+                    status_code=STATUS["BAD_REQUEST"],
+                )
+    except ConstraintError:
+        return response_error(
+            error="Username đã tồn tại", status_code=STATUS["BAD_REQUEST"]
         )
-        record = result.single()
-
-        if record:
-            return jsonify({"status": "success", "user": record["user"]})
-        else:
-            return jsonify({"status": "fail"}), 401

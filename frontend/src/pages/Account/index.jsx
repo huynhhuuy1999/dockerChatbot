@@ -33,8 +33,14 @@ export const Account = () => {
         }
       })
       .catch((err) => {
-        console.log("err", err);
-        alert("❌ Lỗi kết nối Backend");
+        if (err.response) {
+          // server trả response (401, 400,...)
+          const msg = err.response.data.error;
+          alert(msg);
+        } else {
+          // lỗi network (server down, sai URL,...)
+          alert("❌ Lỗi kết nối Backend");
+        }
       });
   };
 

@@ -21,8 +21,12 @@ export const Login = () => {
         }
       })
       .catch((err) => {
-        alert("❌ Lỗi kết nối Backend");
-        console.error(err);
+        if (err.response) {
+          const msg = err.response.data.error;
+          alert(msg);
+        } else {
+          alert("❌ Lỗi kết nối Backend");
+        }
       });
   };
   return (
