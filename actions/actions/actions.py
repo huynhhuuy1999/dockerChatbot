@@ -36,7 +36,7 @@ class trachNhiemVaQuyenHanAction(Action):
             session = drv.session(database=NEO4J_DATABASE)
             entities = tracker.latest_message["entities"]
             doi_tuong = tracker.get_slot("doi_tuong")
-            print("doi_tuong", doi_tuong)
+            # print("doi_tuong", doi_tuong)
 
             giangVien = next(
                 (e["value"] for e in entities if e["entity"] == "GiangVien"), None

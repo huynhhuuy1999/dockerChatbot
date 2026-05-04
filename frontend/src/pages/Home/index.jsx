@@ -109,7 +109,7 @@ export const Home = () => {
               {currentItems.map((item, i) => {
                 return (
                   <tr key={i}>
-                    <td>{indexOfFirstItem + i + 1}</td>
+                    <td className="text-center">{indexOfFirstItem + i + 1}</td>
                     <td>{item.intent}</td>
                     <td>
                       <button

@@ -1,3 +1,4 @@
+Cách chạy trên máy mới:
 - Setup Docker
 - Load file tar từ docker:
     docker load -i chatbot_project.tar
@@ -20,3 +21,68 @@ SHOW CONSTRAINT;
 DROP CONSTRAINT dieu_name_content_unique;
 + Thoát cypher-shell:
 cypher-shell -u neo4j -p 123456789 -f /var/lib/neo4j/import/export.cypher
+
+* Cypher upload data:
+// -- add khoan
+LOAD CSV WITH HEADERS FROM 'file:///test.csv' AS row
+FIELDTERMINATOR ';'
+
+// CHẶN NGAY TỪ ĐẦU: Nếu Answer trống thì bỏ qua toàn bộ dòng này
+WITH row WHERE row.Answer IS NOT NULL AND row.Answer <> "" AND row.Intent IS NOT NULL AND row.Intent <> "" AND row.Text_intent IS NOT NULL AND row.Text_intent <> ""
+
+MATCH (do:DOCUMENT {name:"TT17"})
+MERGE (i:Intent {name: row.Intent, text: row.Text_intent})
+MERGE (do)-[:HAS_INTENT]->(i)
+
+WITH row, i
+// WHERE row.Answer <> ""
+CREATE (a:Answer {answer: row.Answer})
+// SET entity chỉ khi có giá trị
+FOREACH (_ IN CASE WHEN row.Entity_name <> "" THEN [1] ELSE [] END |
+SET a.entity = row.Entity_name
+)
+// SET Answer_dieu chỉ khi có dữ liệu
+FOREACH (_ IN CASE WHEN row.Answer_dieu <> "" THEN [1] ELSE [] END |
+SET a.dieu = row.Answer_dieu
+)
+FOREACH (_ IN CASE WHEN row.Answer_khoan <> "" THEN [1] ELSE [] END |
+SET a.khoan = row.Answer_khoan
+)
+MERGE (a)-[:BELONG_TO]->(i)
+
+// DIEU
+WITH row, i, a
+FOREACH (_ IN CASE WHEN row.DIEU_name <> "" OR row.DIEU_content <> "" OR row.DIEU_name IS NOT NULL or row.DIEU_content IS NOT NULL THEN [1] ELSE [] END |
+MERGE (di:DIEU {name: row.DIEU_name, content: row.DIEU_content})
+MERGE (di)-[:HAS_DIEU]->(a)
+)
+
+// ENTITY
+// WITH row, i
+// FOREACH (_ IN CASE WHEN row.Entity_name <> "" THEN [1] ELSE [] END |
+// MERGE (e:Entity {name: row.Entity_name, text: row.Entity_text})
+// MERGE (i)-[:HAS_ENTITY]->(e)
+// )
+
+// ENTITY
+WITH row, i
+FOREACH (_ IN CASE WHEN row.Entity_name <> "" THEN [1] ELSE [] END |
+    // 1. MERGE dựa trên 'name' để tìm hoặc tạo node Entity
+    MERGE (e:Entity {name: row.Entity_name})
+    
+    // 2. Nếu node MỚI được tạo: Thiết lập 'text' nếu CSV có dữ liệu
+    ON CREATE SET e.text = CASE WHEN row.Entity_text <> "" THEN row.Entity_text ELSE null END
+    
+    // 3. Nếu node ĐÃ CÓ SẴN: Chỉ cập nhật 'text' nếu hiện tại nó đang trống VÀ trong CSV có dữ liệu
+    ON MATCH SET e.text = CASE 
+        WHEN (e.text IS NULL OR e.text = "") AND row.Entity_text <> "" 
+        THEN row.Entity_text 
+        ELSE e.text 
+    END
+
+    // 4. Thiết lập quan hệ với Intent
+    MERGE (i)-[:HAS_ENTITY]->(e)
+)
+
+pass: admin
+123456

@@ -35,6 +35,8 @@ services:
       - "8282:8282"
     depends_on:
       - rasa
+    volumes:
+      - ./frontend_client:/app
 
   action_server:
     build: 
@@ -48,6 +50,27 @@ services:
       - NEO4J_USER=neo4j
       - NEO4J_PASSWORD=123456789
       - NEO4J_DATABASE=test
+    volumes:
+      # Chỉ mount source actions để hot-reload, tránh đè toàn bộ /app
+      # (đè /app sẽ làm mất entrypoint/runtime file trong image).
+      - ./actions/actions:/app/actions
+    entrypoint: []   # 🔥 override entrypoint
+    command:
+      [
+        "watchmedo",
+        "auto-restart",
+        "--directory=/app/actions",
+        "--pattern=*.py",
+        "--recursive",
+        "--",
+        "python",
+        "-m",
+        "rasa_sdk",
+        "--port",
+        "5055",
+        "--actions",
+        "actions"
+      ]
 
   backend:
     build: 

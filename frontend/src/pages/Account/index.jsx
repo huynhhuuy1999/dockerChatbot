@@ -46,40 +46,42 @@ export const Account = () => {
 
   return (
     <>
-      <table className="table table-hover align-middle">
-        <thead>
-          <tr>
-            <th width="60">STT</th>
-            <th>Username</th>
-            <th width="160">Hành động</th>
-          </tr>
-        </thead>
-        <tbody id="intentTable">
-          {listUser.map((item, i) => {
-            return (
-              <tr key={i}>
-                <td>{i + 1}</td>
-                <td>{item.username}</td>
-                <td>
-                  <button
-                    className="btn btn-sm btn-outline-primary me-2"
-                    onClick={() => {
-                      setShowModal(true);
-                      setCurrentUserUpdate({
-                        ...item,
-                        newPassword: "",
-                        newUserName: item.username,
-                      });
-                    }}
-                  >
-                    <i className="bi bi-pencil-square"></i> Cập nhật
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className={`card ${style.blockTable}`}>
+        <table className="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th width="60">STT</th>
+              <th>Username</th>
+              <th width="160">Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="intentTable">
+            {listUser.map((item, i) => {
+              return (
+                <tr key={i}>
+                  <td className="text-center">{i + 1}</td>
+                  <td>{item.username}</td>
+                  <td>
+                    <button
+                      className="btn btn-sm btn-outline-primary me-2"
+                      onClick={() => {
+                        setShowModal(true);
+                        setCurrentUserUpdate({
+                          ...item,
+                          newPassword: "",
+                          newUserName: item.username,
+                        });
+                      }}
+                    >
+                      <i className="bi bi-pencil-square"></i> Cập nhật
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
